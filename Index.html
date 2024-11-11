@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Webpage</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+    <!-- Header with Menu Icon -->
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <h1>Your Farm Name</h1>
+        <div class="dropdown-menu" id="menu">
+            <a href="juja/juja.html">Juja</a>
+            <a href="kanyagia/Kanyagia.html">Kanyagia</a>
+            <a href="kiahungu/kiahungu.html">Kiahungu</a>
+            <a href="syokimau/syokimau.html">Syokimau</a>
+            <a href="kdq/KDQ.html">KDQ</a>
+        </div>
+    </header>
+
+    <!-- Rolling Images Carousel -->
+    <div class="carousel">
+        <img src="farm1.jpeg" alt="Farm Image 1" class="carousel-image">
+        <img src="farm1.jpeg" alt="Farm Image 2" class="carousel-image">
+        <img src="farm1.jpeg" alt="Farm Image 3" class="carousel-image">
+    </div>
+
+    <!-- Date and Rolling Alerts Section -->
+    <section class="info-section">
+        <div class="date" id="date"></div>
+        <div class="alerts">
+            <div class="alert">⚠️ Pending Bills: 2 bills due soon!</div>
+            <div class="alert">📢 Feed Alert: Stock running low on corn feed!</div>
+            <div class="alert">🎉 Upcoming Event: Farm Open Day next week!</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Farm Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>

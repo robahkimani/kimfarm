@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juja Farm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header with Menu Icon -->
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <h1>Juja Farm</h1>
+    </header>
+
+
+    <!-- Functionalities Cards -->
+    <section class="cards-section">
+        <div class="card" onclick="toggleDropdown('homestead')">
+            <h3>Homestead</h3>
+            <p>Manage Homestead Operations</p>
+        </div>
+        <div class="card" onclick="toggleDropdown('goats')">
+            <h3>Goats</h3>
+            <p>Manage Goat Operations</p>
+        </div>
+        <div class="card" onclick="toggleDropdown('kuku')">
+            <h3>Kuku</h3>
+            <p>Manage Chicken (Kuku) Operations</p>
+        </div>
+        <div class="card" onclick="toggleDropdown('dogs')">
+            <h3>Dogs</h3>
+            <p>Manage Dog Operations</p>
+        </div>
+    </section>
+
+    <!-- Dropdown Menus for Each Card -->
+    <div id="homestead-dropdown" class="dropdown" onclick="event.stopPropagation()">
+        <ul>
+            <li onclick="showPopup('homestead', 'Feeding')">Feeding</li>
+            <li onclick="showPopup('homestead', 'Vaccinations')">Vaccinations</li>
+            <li onclick="showPopup('homestead', 'Maintenance')">Maintenance</li>
+            <li onclick="showPopup('homestead', 'Harvesting')">Harvesting</li>
+            <li onclick="showPopup('homestead', 'Inventory')">Inventory</li>
+        </ul>
+    </div>
+
+    <div id="goats-dropdown" class="dropdown" onclick="event.stopPropagation()">
+        <ul>
+            <li onclick="showPopup('goats', 'Feeding')">Feeding</li>
+            <li onclick="showPopup('goats', 'Vaccinations')">Vaccinations</li>
+            <li onclick="showPopup('goats', 'Herd Management')">Herd Management</li>
+            <li onclick="showPopup('goats', 'Breeding')">Breeding</li>
+            <li onclick="showPopup('goats', 'Health Checks')">Health Checks</li>
+        </ul>
+    </div>
+
+    <div id="kuku-dropdown" class="dropdown" onclick="event.stopPropagation()">
+        <ul>
+            <li onclick="showPopup('kuku', 'Feeding')">Feeding</li>
+            <li onclick="showPopup('kuku', 'Egg Production')">Egg Production</li>
+            <li onclick="showPopup('kuku', 'Vaccinations')">Vaccinations</li>
+            <li onclick="showPopup('kuku', 'Brooding')">Brooding</li>
+            <li onclick="showPopup('kuku', 'Cage Maintenance')">Cage Maintenance</li>
+        </ul>
+    </div>
+
+    <div id="dogs-dropdown" class="dropdown" onclick="event.stopPropagation()">
+        <ul>
+            <li onclick="showPopup('dogs', 'Feeding')">Feeding</li>
+            <li onclick="showPopup('dogs', 'Vaccinations')">Vaccinations</li>
+            <li onclick="showPopup('dogs', 'Training')">Training</li>
+            <li onclick="showPopup('dogs', 'Breeding')">Breeding</li>
+            <li onclick="showPopup('dogs', 'Health Checks')">Health Checks</li>
+        </ul>
+    </div>
+
+    <!-- Popup for Functionalities -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+            <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Juja Farm. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
